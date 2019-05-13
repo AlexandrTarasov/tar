@@ -40,6 +40,8 @@
 	</div>
 
     <div class="container marketing">
+
+
 @if( Route::current()->getName() === 'home')
     <!-- Carousel
     ================================================== -->
