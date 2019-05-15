@@ -1,15 +1,14 @@
 <?php
-
 Route::resource('/','IndexController', ['only'=>['index'], 'names'=>['index'=>'home']]);
 
-Route::get('/sp-{alias}', 'ArticleController'); 
 Route::resource('/blog', 'Blog_contentController',['parametres'=>['blog_items' => 'alias'] ]); 
+Route::get('/sp-{alias}', 'ArticleController'); 
 Route::get('/blog/{alias}', 'Blog_contentController@showOnePost'); 
 
 Auth::routes();
 
 //Clear Cache facade value:
-Route::get('/clear', function() {
+Route::get('clear', function() {
     $exitCode = Artisan::call('cache:clear');
     $exitCode = Artisan::call('config:clear');
     return '<h1>config and cache clear</h1>';
@@ -43,3 +42,4 @@ Route::get('/view-clear', function() {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
