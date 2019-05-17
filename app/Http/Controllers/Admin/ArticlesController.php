@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Article;
 
 class ArticlesController extends Controller
 {
@@ -14,7 +15,9 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-        //
+		return view('admin.articles.index',[
+			'articles'=>Article::orderBy('created_at','desc')->paginate(10)
+		]);
     }
 
     /**

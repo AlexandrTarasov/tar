@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-				<div class="card-header"><a href="">categoies</a>, <a href="">posts</a>, <a href="">tags</a> </div>
+				<div class="card-header"><a href="admin/articles">articles</a>, <a href="/admin/cats">categories</a>, <a href="/admin/posts">posts</a>, <a href="/admin/tags">tags</a> </div>
 
                 <div class="card-body">
                     @if (session('status'))
