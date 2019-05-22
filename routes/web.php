@@ -6,7 +6,7 @@ Route::get('/sp-{alias}', 'ArticleController');
 Route::get('/blog/{alias}', 'Blog_contentController@showOnePost'); 
 
 Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>['auth']], function(){
-	Route::get('/articles', 'ArticlesController@index')->name('admin.articles');
+	Route::resource('/articles', 'ArticlesController', ['as'=>'admin']);
 	Route::get('/cats', 'CategoriesController@index')->name('admin.categories');
 	Route::get('/posts', 'PostsController@index')->name('admin.posts');
 	Route::get('/tags', 'TagsController@index')->name('admin.tags');

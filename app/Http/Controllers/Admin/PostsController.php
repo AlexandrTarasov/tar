@@ -4,9 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Article;
 
-class ArticlesController extends Controller
+class PostsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +14,7 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-		return view('admin.articles.index',[
-			'articles'=>Article::orderBy('created_at','desc')->paginate(4)
-		]);
+        //
     }
 
     /**
@@ -72,19 +69,7 @@ class ArticlesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //validate input fields
-        request()->validate([
-            'title' => 'required',
-            'text' => 'required',
-        ]);
-		
-		$orm = Article::find($id);
-		$orm->title = $request->input('title');
-		$orm->text = $request->input('text');
-		$orm->save();
-
-		return redirect()->route('admin.articles.index')->with('success', 'Text updated.');
-
+        //
     }
 
     /**
@@ -95,8 +80,6 @@ class ArticlesController extends Controller
      */
     public function destroy($id)
     {
-      Article::destroy($id);
-      return redirect()->route('admin.articles.index')
-             ->with('success','Post deleted successfully');
+        //
     }
 }

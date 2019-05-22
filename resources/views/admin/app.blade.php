@@ -44,7 +44,7 @@
 							<a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
 						</li>
 						<li class="nav-item">
-<a href="{{route('admin.articles')}}">
+<a href="{{route('admin.articles.index')}}">
 							<a class="nav-link" href="articles">articles</a>
 						</li>
 						<li class="nav-item">
