@@ -1,12 +1,13 @@
 @if($menu)
 
-<nav class="navbar navbar-inverse navbar-static-top">
-	<div class="container">
-		<div id="navbar" class="navbar-collapse collapse">
-			<ul class="nav navbar-nav">
-				@include('pink.customMenuItems', ['items'=>$menu->roots()])
-			</ul>
-		</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		 <ul class="navbar-nav mr-auto">
+			@include('pink.customMenuItems', ['items'=>$menu->roots()])
+		</ul>
 	</div>
 </nav>
 @endif

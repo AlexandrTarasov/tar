@@ -45,16 +45,19 @@
 						</li>
 						<li class="nav-item">
 <a href="{{route('admin.articles.index')}}">
-							<a class="nav-link" href="articles">articles</a>
+							<a class="nav-link" style="float:left;" href="/admin/articles/create">+</a>
+							<a class="nav-link" style="float:right;" href="/admin/articles">articles</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="cats">categories</a>
+							<a class="nav-link" href="/admin/cats">categories</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="posts">posts</a>
+
+							<a class="nav-link" style="float:left;" href="/admin/posts/create">+</a>
+							<a class="nav-link" style="float:left;" href="/admin/posts">posts</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="tags">tags</a>
+							<a class="nav-link" href="/admin/tags">tags</a>
 						</li>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

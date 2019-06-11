@@ -31,7 +31,7 @@ class Blog_contentController extends SiteController
 
 	public function getBlogContent($alias = FALSE)
 	{
-		return $this->b_rep->get(['title','text','date','alias'], 3);
+		return $this->b_rep->get(['title','text','created_at','alias'], 15);
 	}
 
 	public function show($alias){

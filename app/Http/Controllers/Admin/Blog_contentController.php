@@ -4,9 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Article;
+use App\Blog_content;
 
-class ArticlesController extends Controller
+class Blog_contentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-		return view('admin.articles.index',[
-			'articles'=>Article::orderBy('created_at','desc')->paginate(4)
+		return view('admin.posts.index',[
+			'posts'=>Blog_content::orderBy('id','title')->paginate(20)
 		]);
     }
 
@@ -27,9 +27,7 @@ class ArticlesController extends Controller
      */
     public function create()
     {
-	return view('admin.articles.add');
-		//Categories
-
+	return view('admin.posts.add');
     }
 
     /**
@@ -40,8 +38,8 @@ class ArticlesController extends Controller
      */
     public function store(Request $request)
     {
-		$article = Article::create($request->all());
-		return redirect()->route('admin.article.index');
+		$post = Blog_content::create($request->all());
+		return redirect()->route('admin.posts.index');
     }
 
     /**
@@ -75,19 +73,17 @@ class ArticlesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //validate input fields
         request()->validate([
             'title' => 'required',
             'text' => 'required',
         ]);
-		
-		$orm = Article::find($id);
+		// dd($request);
+		$orm = Blog_content::find($id);
 		$orm->title = $request->input('title');
 		$orm->text = $request->input('text');
 		$orm->save();
 
-		return redirect()->route('admin.articles.index')->with('success', 'Text updated.');
-
+		return redirect()->route('admin.posts.index')->with('success', 'Post updated.');
     }
 
     /**
@@ -98,8 +94,9 @@ class ArticlesController extends Controller
      */
     public function destroy($id)
     {
-      Article::destroy($id);
-      return redirect()->route('admin.articles.index')
+		// dd($id);
+      Blog_content::destroy($id);
+      return redirect()->route('admin.posts.index')
              ->with('success','Post deleted successfully');
     }
 }

@@ -10,32 +10,34 @@
     <meta name="author" content="Александр" >
     <link rel="icon" href="favicon.ico">
     <!-- Bootstrap core CSS -->
-    <link href="{{asset('bootstrap/dist/css/bootstrap.css')}}" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="bootstrap/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
+    <!-- <link href="bootstrap/assets/css/ie10&#45;viewport&#45;bug&#45;workaround.css" rel="stylesheet"> -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="http://getbootstrap.com/assets/js/ie-emulation-modes-warning.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <!-- Custom styles for this template -->
     <link href="css/carousel.css" rel="stylesheet">
+<style>
+	 nav{margin-bottom: 10px;}
+	 .card{margin-bottom: 15px;}
+</style>
   </head>
 <!-- NAVBAR
 ================================================== -->
 <body>
     <div class="container">
       <img class="img-responsive" style="width:160px" src="/img/logo.jpg">
-      <img class="drawer" style="position: absolute; margin: -30px 0 0 533px;" src="/img/drawer.jpg" >
+      <img class="drawer" style="" src="/img/drawer.jpg" >
 
     </div>
-    <div class="navbar-wrapper" style="margin-top: 19px; position:relative;">
+    <div style="margin-top: 19px; position:relative;">
       <div class="container">
 		@yield('navigation')
       </div>
     </div>
-	<div class="container" >
+	<div class="container" style="font-size:21px;" >
 		@yield('content')
 	</div>
 
@@ -45,55 +47,35 @@
 @if( Route::current()->getName() === 'home')
     <!-- Carousel
     ================================================== -->
-	<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="10000">
-		<!-- Indicators -->
-		<ol class="carousel-indicators">
-			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-			<li data-target="#myCarousel" data-slide-to="1"></li>
-			<li data-target="#myCarousel" data-slide-to="2"></li>
-		</ol>
-		<div class="carousel-inner" role="listbox">
 
-			<div class="item active">
-				<img class="first-slide" src="/img/programmer-slider-2.jpg" alt="First slide">
-				<div class="container">
-					<div class="carousel-caption">
-						<h1>Hi my guest!</h1>
-						<p>Now you visit the site dedicated to the building of trading platforms</p>
-						<p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				<img class="second-slide" src="/img/Tarasov-A-main-foto2.jpg" alt="Second slide">
-				<div class="container">
-					<div class="carousel-caption">
-						<h1></h1>
-						<p>It's me</p>
-						<p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				<img class="third-slide" src="/img/programmer-slider-3.jpg" alt="Third slide">
-				<div class="container">
-					<div class="carousel-caption">
-						<h1>Trading on MMA.</h1>
-						<p>a</p>
-						<p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-			<span class="sr-only">Previous</span>
-		</a>
-		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-			<span class="sr-only">Next</span>
-		</a>
-	</div>
+
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="height: 500px;">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active" style="text-align: center;">
+      <img src="/img/programmer-slider-2.jpg" class="d-block " style="margin: 0 auto;" alt="...">
+    </div>
+    <div class="carousel-item"  style="text-align: center;">
+      <img src="/img/Tarasov-A-main-foto2.jpg" class="d-block "  style="margin: 0 auto;" alt="...">
+    </div>
+    <div class="carousel-item"  style="text-align: center;">
+      <img src="/img/programmer-slider-3.jpg" class="d-block " style="margin: 0 auto;" alt="...">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 	<!-- /.carousel -->
 
 
@@ -178,12 +160,13 @@
 
     </div><!-- /.container --!>
 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="{{asset('bootstrap/dist/js/bootstrap.min.js')}}"></script>
-    <script src="http://getbootstrap.com/assets/js/vendor/holder.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+    <!-- <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script> -->
+    <!-- <script src="{{asset('bootstrap/dist/js/bootstrap.min.js')}}"></script> -->
   </body>
 </html>
