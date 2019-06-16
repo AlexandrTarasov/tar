@@ -22,6 +22,9 @@
 <style>
 	 nav{margin-bottom: 10px;}
 	 .card{margin-bottom: 15px;}
+	 .well{margin-bottom: 55px;}	
+	 .nav-item{border-right: 1px solid #c2bebe; box-shadow: 2px 3px 5px #c4c4c4;margin-right: 10px;}
+	 .active{box-shadow: 2px 3px 5px #3d3b3b;}
 </style>
   </head>
 <!-- NAVBAR
@@ -155,7 +158,7 @@
       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p>2017 - {{date('Y')}}<a href="#"></a> &middot; <a href="#">Terms</a></p>
       </footer>
 
     </div><!-- /.container --!>
