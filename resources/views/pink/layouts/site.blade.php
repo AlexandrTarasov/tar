@@ -29,7 +29,7 @@
   </head>
 <!-- NAVBAR
 ================================================== -->
-<body>
+<body style="display: flex; height: 100vh;flex-direction: column;">
     <div class="container">
       <img class="img-responsive" style="width:160px" src="/img/logo.jpg">
       <img class="drawer" style="" src="/img/drawer.jpg" >
@@ -40,11 +40,11 @@
 		@yield('navigation')
       </div>
     </div>
-	<div class="container" style="font-size:21px;" >
+	<div class="container" style="font-size:21px; flex: 1;" >
 		@yield('content')
 	</div>
 
-    <div class="container marketing">
+    <div class="container marketing"  style="">
 
 
 @if( Route::current()->getName() === 'home')
