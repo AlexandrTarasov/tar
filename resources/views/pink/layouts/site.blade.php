@@ -20,11 +20,11 @@
     <!-- Custom styles for this template -->
     <link href="css/carousel.css" rel="stylesheet">
 <style>
-	 nav{margin-bottom: 10px;}
-	 .card{margin-bottom: 15px;}
-	 .well{margin-bottom: 55px;}	
-	 .nav-item{border-right: 1px solid #c2bebe; box-shadow: 2px 3px 5px #c4c4c4;margin-right: 10px;}
-	 .active{box-shadow: 2px 3px 5px #3d3b3b;}
+	nav{margin-bottom: 10px;}
+	.card{margin-bottom: 15px;}
+	.well{margin-bottom: 55px;}	
+	.nav-item{border-right: 1px solid #c2bebe; box-shadow: 2px 3px 5px #c4c4c4;margin-right: 10px;}
+	.navbar-nav li.active{box-shadow: 2px 3px 5px #3d3b3b;}
 </style>
   </head>
 <!-- NAVBAR
@@ -53,21 +53,21 @@
 
 
 
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="height: 500px;">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="height:revert;">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
-  <div class="carousel-inner">
+  <div class="carousel-inner" style="width: 80%;margin: 0 auto;">
     <div class="carousel-item active" style="text-align: center;">
-      <img src="/img/programmer-slider-2.jpg" class="d-block " style="margin: 0 auto;" alt="...">
+      <img src="/img/programmer-slider-2.jpg" class="d-block " style="margin: 0 auto; width:100%" alt="...">
     </div>
     <div class="carousel-item"  style="text-align: center;">
-      <img src="/img/Tarasov-A-main-foto2.jpg" class="d-block "  style="margin: 0 auto;" alt="...">
+      <img src="/img/Tarasov-A-main-foto2.jpg" class="d-block "  style="margin: 0 auto; width:100%" alt="...">
     </div>
     <div class="carousel-item"  style="text-align: center;">
-      <img src="/img/programmer-slider-3.jpg" class="d-block " style="margin: 0 auto;" alt="...">
+      <img src="/img/programmer-slider-3.jpg" class="d-block " style="margin: 0 auto; width:100%" alt="...">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -80,8 +80,6 @@
   </a>
 </div>
 	<!-- /.carousel -->
-
-
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
