@@ -13,7 +13,7 @@
 	@if($blog_items)
 		@foreach($blog_items as $blog_item)	
 <div class="card">
-  <div class="card-header">
+  <div class="card-header" style="font-size: 1.5rem;">
 				<h2><a href={{URL::current().'/'.$blog_item['alias'] }}>{{$blog_item['title']}}</a></h2>
 	</div>
 	<div class="card-body">
