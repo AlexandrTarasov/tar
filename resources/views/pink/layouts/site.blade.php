@@ -23,6 +23,9 @@
 	nav{margin-bottom: 10px;}
 	.card{margin-bottom: 15px;}
 	.card-header h2{font-size: 1.4rem;}
+	.card-header h1{font-size: 1.4rem;}
+	.card-body h3{font-size: 1.45rem; color: #047528;}
+	.card-body {font-size: 1.10rem;}
 	.card-header{padding: .75rem 0.5rem;}
 	.well{margin-bottom: 55px;}	
 	.nav-item{border-right: 1px solid #c2bebe; box-shadow: 2px 3px 5px #c4c4c4;margin-right: 10px;}
