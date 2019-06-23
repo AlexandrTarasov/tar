@@ -28,15 +28,19 @@
 	.card-body {font-size: 1.10rem;}
 	.card-header{padding: .75rem 0.5rem;}
 	.well{margin-bottom: 55px;}	
+	.carousel-inner{width:80%;}
 	.nav-item{border-right: 1px solid #c2bebe; box-shadow: 2px 3px 5px #c4c4c4;margin-right: 10px;}
 	.navbar-nav li.active{box-shadow: 2px 3px 5px #3d3b3b;}
+	@media screen and (max-width: 424px) {
+		.carousel-inner{width:100%;}
+	}
 </style>
   </head>
 <!-- NAVBAR
 ================================================== -->
 <body style="display: flex; height: 100vh;flex-direction: column;">
-    <div class="container">
-      <img class="img-responsive" style="width:160px" src="/img/logo.jpg">
+	<div class="container">
+		<a href="/"> <img class="img-responsive" style="width:160px" src="/img/logo.jpg"> </a>
       <img class="drawer" style="" src="/img/drawer.jpg" >
 
     </div>
@@ -64,7 +68,7 @@
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
-  <div class="carousel-inner" style="width: 80%;margin: 0 auto;">
+  <div class="carousel-inner" style="margin: 0 auto;">
     <div class="carousel-item active" style="text-align: center;">
       <img src="/img/programmer-slider-2.jpg" class="d-block " style="margin: 0 auto; width:100%" alt="...">
     </div>
@@ -88,13 +92,15 @@
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
-
+	<h1 style="font-size: 1.5rem; text-align: center;border-bottom: 1px solid #d2d2d2; margin-bottom: 20px; padding-bottom: 15px;">Site of Alex Tarasov </br>WEB programmer </h1>
+	<h2 style="font-size: 1.1rem; text-align: center;">Why you should choose my services</br>
+	<i class="fas fa-arrow-down" style="font-size: 1.5rem;"></i></h2>
       <div class="row">
         <div class="col-lg-4">
           <img class="img-circle" src="/img/main-page-reliability.png" alt="Generic placeholder image" width="140" height="140">
           <h2>Reliability</h2>
-          <p>I have worked in the web I.T field for more than 10 years. For this time I've seen a lot, fashion, trends, deceivers that didn't dislodge me from the track. I keep myself intact and up to date with the latest frameworks and technologies. My domain was registered in July of 2007, and you can see for yourself by going to the WHOIS LOOKUP SERVICE at https://www.whois.com/whois/ and inputting iwork.com.ua. I will do everything in my power to grow your project and to fulfill your needs.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <p>I have worked in the web I.T field for more than 10 years. For this time I've seen a lot, fashion, trends, deceivers that didn't dislodge me from the track. I keep myself intact and up to date with the latest frameworks and technologies. My domain was registered in July of 2007, I will do everything in my power to grow your project and to fulfill your needs.</p>
+          <p style="display:none;"><a class="btn btn-default" href="#" role="button"></a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="img-circle" src="/img/main-page-responsibility.png" alt="Generic placeholder image" width="140" height="140">
@@ -104,13 +110,13 @@
 			their needs. When we take up the project, 
 			we will support it for a long duration, and take the required 
 			time to complete it on deadlines.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <p style="display:none;"><a class="btn btn-default" href="#" role="button"></a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="img-circle" src="/img/main-page-comprehension.png" alt="Generic placeholder image" width="140" height="140">
           <h2>Comprehension</h2>
           <p>The purpose of the business is not the source code but profit-making accordingly a more thoughtful advertising company, brand uniqueness, work with clients, CRM, understanding the tasks of the business as a whole, not just its online part.. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <p style="display:none;"><a class="btn btn-default" href="#" role="button"></a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
 
@@ -160,7 +166,7 @@
 
       <!-- FOOTER -->
       <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p class="pull-right"><a href="#"><i style="color: #5bca5b; position: fixed; bottom: 10px; font-size: 25px; right: 10px;" class="fas fa-arrow-circle-up"></i></a></p>
         <p>2017 - {{date('Y')}}<a href="#"></a> &middot; <a href="#">Terms</a></p>
       </footer>
 
