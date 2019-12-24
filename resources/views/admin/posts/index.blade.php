@@ -18,13 +18,9 @@
 					<textarea name="text" class="form-control summernote" id="summernote" 
 					rows="3">{{$post->text}}</textarea>
 					<input class="btn btn-primary" type="submit" value="Save">
-					<input type="submit"  style="float:right;" class="btn btn-danger" name="_method" value="DELETE" onclick="if(confirm('Del?')){ return true; }else{ return false; }">
+					<input type="submit"  style="float:right;" class="btn btn-danger" 
+					name="_method" value="DELETE" onclick="if(confirm('Del?')){ return true; }else{ return false; }">
 			</form>
-			<!--form onsubmit="if(confirm('Del?')){ return true; }else{ return false; }" action="{{route('admin.posts.destroy', $post)}}" method="POST">
-				<input type="hidden" name="_method" value="DELETE">
-				{{ csrf_field() }}
-				<button type="submit" style="float:right;" class="btn btn-danger">del</button>
-			</form-->
 		</div>
 
 		
