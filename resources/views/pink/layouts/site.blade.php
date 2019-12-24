@@ -29,7 +29,6 @@
 	.card-header{padding: .75rem 0.5rem;}
 	.well{margin-bottom: 55px;}	
 	.carousel-inner{width:80%;}
-	.nav-item{border-right: 1px solid #c2bebe; box-shadow: 2px 3px 5px #c4c4c4;margin-right: 10px;}
 	.navbar-nav li.active{box-shadow: 2px 3px 5px #3d3b3b;}
 	@media screen and (max-width: 424px) {
 		.carousel-inner{width:100%;}

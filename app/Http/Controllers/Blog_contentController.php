@@ -24,7 +24,7 @@ class Blog_contentController extends SiteController
 	}
 
 	public function index(){
-		$blog_items = $this->getBlogContent();
+		$blog_items = $this->getBlogContent();	
 		$title = "list of last published";
 		return view('pink.blog_items', ['blog_items' =>$blog_items, 'title'=>$title, 'navigation' =>$this->navigation]);
 	}
