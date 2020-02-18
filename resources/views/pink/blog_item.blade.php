@@ -1,3 +1,4 @@
+
 @extends('pink.layouts.site')
 
 @section('navigation')
@@ -15,9 +16,14 @@
   <div class="card-header">
     <h1>{!!$header1!!}</h1>
   </div>
-  <div class="card-body">
+ <style>
+	pre{
+		color: hsl(331.8, 93.6%, 42.7%);
+	}
+</style>
+<div class="card-body">
      {!!$blog_item!!}
-      <footer class="blockquote-footer">tags: </footer>
+      <footer class="blockquote-footer">tags: {!!$tags!!}</footer>
   </div>
 </div>
 
