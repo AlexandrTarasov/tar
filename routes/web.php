@@ -4,6 +4,7 @@ Route::resource('/','IndexController', ['only'=>['index'], 'names'=>['index'=>'h
 Route::resource('/blog', 'Blog_contentController',['parametres'=>['blog_items' => 'alias'] ]); 
 Route::get('/sp-{alias}', 'ArticleController'); 
 Route::get('/blog/{alias}', 'Blog_contentController@showOnePost'); 
+Route::get('/blog/tag/{tag}', 'Blog_contentController@showTaggedPosts'); 
 
 Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>['auth']], function(){
 	Route::resource('/articles', 'ArticlesController', ['as'=>'admin']);

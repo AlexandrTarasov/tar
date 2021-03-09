@@ -11,10 +11,11 @@
 
 
 @section('content')
-
 <div class="card">
   <div class="card-header">
-    <h1>{!!$header1!!}</h1>
+	  <h1 style="margin:0;">{!!$header1!!}  <div class="" style="float:right;font-size: 16px; margin-top: 3px;color: gray;">
+			tags:<a href="" class="">  {!!$tags!!}</a></div>
+	  </h1>
   </div>
  <style>
 	pre{
@@ -23,7 +24,7 @@
 </style>
 <div class="card-body">
      {!!$blog_item!!}
-      <footer class="blockquote-footer">tags: {!!$tags!!}</footer>
+      <footer class="blockquote-footer"></footer>
   </div>
 </div>
 
